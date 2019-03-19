@@ -11,7 +11,7 @@ parser.add_argument('--iou-thres', type=float, default=0.5, help='iou threshold 
 parser.add_argument('--conf-thres', type=float, default=0.3, help='object confidence threshold')
 parser.add_argument('--nms-thres', type=float, default=0.45, help='iou threshold for non-maximum suppression')
 parser.add_argument('--img-size', type=int, default=512, help='size of each image dimension')
-parser.add_argument('--cfg', type=str, default='cfg/yolov3.cfg', help='cfg file path')
+parser.add_argument('--cfg', type=str, default='cfg/yolov3-deconv.cfg', help='cfg file path')
 parser.add_argument('--data-cfg', type=str, default='cfg/coco.data', help='coco.data file path')
 parser.add_argument('--test', type=bool, default=True, help='chose test rather than valid')
 opt = parser.parse_args()

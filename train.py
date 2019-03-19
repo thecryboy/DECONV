@@ -12,7 +12,7 @@ parser.add_argument('--lr', type=int, default=0.001, help='learning rate')
 parser.add_argument('--img-size', type=int, default=512, help='pixels')
 parser.add_argument('--chose_cls_loss', type=str, default='focalloss',help='chose which loss function in cls')  # 可选的有logistic，softmax，focalloss
 parser.add_argument('--resume', action='store_true', help='resume training flag')
-parser.add_argument('--cfg', type=str, default='cfg/yolov3.cfg', help='cfg file path')
+parser.add_argument('--cfg', type=str, default='cfg/yolov3-deconv.cfg', help='cfg file path')
 parser.add_argument('--data-cfg', type=str, default='cfg/coco.data', help='coco.data file path')
 parser.add_argument('--multi-scale', action='store_true', help='random image sizes per batch 320 - 608')
 parser.add_argument('--accumulated-batches', type=int, default=1, help='number of batches before optimizer step')
@@ -83,7 +83,7 @@ def train(
 
     else:
         # Initialize model with backbone (optional)
-        if cfg.endswith('yolov3.cfg'):
+        if cfg.endswith('yolov3-deconv.cfg'):
             load_darknet_weights(model, weights + 'darknet53.conv.74')
             cutoff = 75
         elif cfg.endswith('yolov3-tiny.cfg'):

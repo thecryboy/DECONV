@@ -9,7 +9,7 @@ from utils.datasets import *
 from utils.utils import *
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--cfg', type=str, default='cfg/yolov3.cfg', help='cfg file path')
+parser.add_argument('--cfg', type=str, default='cfg/yolov3-deconv.cfg', help='cfg file path')
 parser.add_argument('--weights', type=str, default='weights/best_old_mAP_model.pt', help='path to weights file')
 parser.add_argument('--images', type=str, default='data/samples', help='path to images')
 parser.add_argument('--img-size', type=int, default=512, help='size of each image dimension')
